@@ -3,7 +3,7 @@ __author__ = 'oliveryiwang'
 import urllib
 import urllib2
 from bs4 import BeautifulSoup
-import cookielib
+#import cookielib
 import os
 import sys
 import re
@@ -16,10 +16,7 @@ sys.setdefaultencoding("utf-8")
 response = urllib2.urlopen('http://dblp1.uni-trier.de/pers/hd/r/Redmiles:David_F=')
 html_src = response.read()
 
-#print html_src
-
 parser = BeautifulSoup(html_src)
-#soup = parser.findAll("div", attrs = {'class': 'hide-body'})
 
 publications = parser.findAll("ul", attrs = {'class': 'publ-list'})
 
